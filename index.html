@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>Robotics Website</title>
+  
+  <!-- CSS Links -->
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body>
+  <!-- Header Section -->
+  <section class="header">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <a href="index.html">
+          <img src="images/LogoTransp.png" alt="Logo" class="logo">
+        </a>
+        <!-- Mobile Menu Toggle -->
+        <div class="navbar_toggle" id="mobileMenu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="navbar_menu" id="navMenu">
+        <i class="fa-solid fa-xmark close-btn" onclick="closeMenu()"></i>
+        <ul>
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="engineering.html" class="nav-link">ENGINEERING</a></li>
+            <li><a href="programming.html" class="nav-link">PROGRAMMING</a></li>
+            <li><a href="sponsors.html" class="nav-link">SPONSORS</a></li>
+            <li><a href="donations.html" class="nav-link">DONATIONS</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="text-box">
+      <h1>THE PATRIOTS 3470</h1>
+      <p>Fueled by passion and dedication, the Patriots engineer their triumph!</p>
+      <br>
+      <a href="about.html" class="hero-btn">Visit Us To Know More</a>
+    </div>
+  </section>
+
+  
+
+  <!-- Mission Section -->
+  <section class="Mission">
+    <div class="text-white"><h1>Our Mission</h1></div>
+    <p>Spread FTC, build robots, and help our community learn engineering and programming!</p>
+    <div class="row">
+      <div class="Mission-col">
+        <h3>What We Do</h3>
+        <p>We do this, this and this. Fill this section and add more if needed.</p>
+      </div>
+      <div class="Mission-col">
+        <h3>What We Do 2</h3>
+        <p>We do this, this and this. Fill this section and add more if needed.</p>
+      </div>
+      <div class="Mission-col">
+        <h3>What We Do 3</h3>
+        <p>We do this, this and this. Fill this section and add more if needed.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="container">
+    <h2>Budget Goals: $2,220</h2>
+
+    <div class="budget-category">
+        <h2>Parts: $1420</h2>
+        <canvas id="partsChart" class="chart"></canvas>
+        <canvas id="motionBreakdown" class="chart breakdown-chart" style="display:none;"></canvas>
+        <canvas id="structureBreakdown" class="chart breakdown-chart" style="display:none;"></canvas>
+        <canvas id="hardwareBreakdown" class="chart breakdown-chart" style="display:none;"></canvas>
+        <canvas id="printingBreakdown" class="chart breakdown-chart" style="display:none;"></canvas>
+       
+    </div>
+
+    <div class="budget-category">
+        <h2>Registration: $800</h2>
+        <canvas id="registrationChart" class="chart"></canvas>
+        
+    </div>
+
+    <div class="budget-category">
+        <h2>Uniforms: $1000 (NF)</h2>
+        <canvas id="uniformsChart" class="chart"></canvas>
+      
+    </div>
+
+    <div class="budget-category">
+        <h2>Travel: $200</h2>
+        <canvas id="travelChart" class="chart"></canvas>
+       
+    </div>
+
+</div>
+
+
+
+
+  
+
+
+
+
+
+
+
+<section class="sponsors-section">
+  <div class="sponsors-container">
+      <h2>Our Generous Sponsors</h2>
+      <div class="sponsors-gallery">
+          <div class="sponsor-item">
+              <img src="images/Together.jpg" alt="Sponsor 1">
+              <p>Sponsor 1</p>
+          </div>
+          <div class="sponsor-item">
+              <img src="images/Together.jpg" alt="Sponsor 2">
+              <p>Sponsor 2</p>
+          </div>
+          <div class="sponsor-item">
+              <img src="images/Together.jpg" alt="Sponsor 3">
+              <p>Sponsor 3</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Sponsors Section -->
+<div class="sponsors-section">
+  <div class="sponsors-container">
+    <!-- Button to Show Sidebar -->
+    <div class="show-sidebar-container">
+      <button class="show-sidebar" onclick="toggleSidebar()">Show Sponsors List</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Menu for Sponsors -->
+<div id="sponsorSidebar" class="sponsor-sidebar">
+  <span class="sponsor-sidebar-close" onclick="toggleSidebar()">×</span>
+  <div class="nav-arrow left">&#9664;</div>
+  <div class="sponsor-sidebar-content">
+    <div class="sponsor-item">
+      <a href="https://example.com/sponsor1" target="_blank">
+        <img src="images/Together.jpg" alt="Sponsor 1">
+        <div class="caption">Sponsor 1</div>
+      </a>
+    </div>
+    <div class="sponsor-item">
+      <a href="https://example.com/sponsor2" target="_blank">
+        <img src="images/Together.jpg" alt="Sponsor 2">
+        <div class="caption">Sponsor 2</div>
+      </a>
+    </div>
+    <div class="sponsor-item">
+      <a href="https://example.com/sponsor3" target="_blank">
+        <img src="images/Together.jpg" alt="Sponsor 3">
+        <div class="caption">Sponsor 3</div>
+      </a>
+    </div>
+    <div class="sponsor-item">
+      <a href="https://example.com/sponsor4" target="_blank">
+        <img src="images/Together.jpg" alt="Sponsor 4">
+        <div class="caption">Sponsor 4</div>
+      </a>
+    </div>
+  </div>
+  <div class="nav-arrow right">&#9654;</div>
+</div>
+
+
+<!-- JavaScript for Sidebar Toggle -->
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sponsorSidebar');
+    sidebar.classList.toggle('active');
+  }
+  
+  // JavaScript for Arrow Navigation
+  const navArrowLeft = document.querySelector('.nav-arrow.left');
+  const navArrowRight = document.querySelector('.nav-arrow.right');
+  const sidebarContent = document.querySelector('.sponsor-sidebar-content');
+  
+  navArrowLeft.addEventListener('click', () => {
+    sidebarContent.scrollBy({ left: -sidebarContent.clientWidth / 2, behavior: 'smooth' });
+  });
+  
+  navArrowRight.addEventListener('click', () => {
+    sidebarContent.scrollBy({ left: sidebarContent.clientWidth / 2, behavior: 'smooth' });
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- Outreach Section -->
+<section class="outreach">
+  <div class="text-white"> <h1>Our Outreach</h1></div>
+  <p>Explain Our Outreach Here!</p>
+  <div class="row">
+      <div class="outreach-col">
+          <a href="community.html">
+              <img src="images/Community.png" alt="Community">
+              <div class="layer">
+                  <h3>Community</h3>
+              </div>
+          </a>
+      </div>
+      <div class="outreach-col">
+          <a href="Competitions.html">
+              <img src="images/Community.png" alt="Competitions">
+              <div class="layer">
+                  <h3>Competitions</h3>
+              </div>
+          </a>
+      </div>
+      <div class="outreach-col">
+          <a href="tech.html">
+              <img src="images/Tech.png" alt="Tech">
+              <div class="layer">
+                  <h3>Tech</h3>
+              </div>
+          </a>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Members Section -->
+<section class="Members">
+  <h1>Our Members</h1>
+  <p>Write about our members and officers</p>
+  <div class="mission-statement-container">
+      <p>Your mission statement goes here.</p>
+  </div>
+  <div class="row">
+      <div class="Members-col">
+          <a href="members.html">
+              <img src="images/Together.jpg" alt="Members">
+              <h3>Members</h3>
+              <p>Write about Members.</p>
+          </a>
+      </div>
+      <div class="Members-col">
+          <a href="officers.html">
+              <img src="images/IMG_1190.jpg" alt="Officers">
+              <h3>Officers</h3>
+              <p>Write about Officers.</p>
+          </a>
+      </div>
+      <div class="Members-col">
+          <a href="advisors.html">
+              <img src="images/IMG_1190.jpg" alt="Advisors">
+              <h3>Advisors</h3>
+              <p>Write about Advisors.</p>
+          </a>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Call to Action Section -->
+  <section class="cta">
+    <h1>Any donations towards our journey can pave us to success!<br> You could be an investor of our future!</h1>
+    <a href="contact.html" class="hero-btn">CONTACT US</a>
+  </section>
+
+  <!-- Footer Section -->
+<section class="footer">
+  <div class="icons">
+    <a href="https://www.youtube.com/@ThePatriots3470/videos" target="_blank" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+    <a href="https://www.instagram.com/thepatriots3470/" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- JavaScript Files -->
+  <script src="app.js"></script>
+
+  <!-- Inline JavaScript -->
+  <script>
+    function closeMenu() {
+      var navMenu = document.getElementById("navMenu");
+      navMenu.classList.remove("show");
+      navMenu.classList.add("hide");
+      setTimeout(() => {
+        navMenu.classList.remove("hide");
+      }, 500); // Match the duration of the animation
+    }
+
+    document.getElementById("mobileMenu").addEventListener("click", function() {
+      var navMenu = document.getElementById("navMenu");
+      var toggleIcon = document.querySelector(".navbar_toggle");
+      
+      if (navMenu.classList.contains("show")) {
+        navMenu.classList.remove("show");
+        navMenu.classList.add("hide");
+        setTimeout(() => {
+          navMenu.classList.remove("hide");
+        }, 600); // Match the duration of the animation
+        toggleIcon.classList.remove("active");
+      } else {
+        navMenu.classList.add("show");
+        navMenu.classList.remove("hide");
+        toggleIcon.classList.add("active");
+      }
+    });
+
+    window.addEventListener('scroll', function () {
+      const headerHeight = document.querySelector('.header').offsetHeight;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > headerHeight) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+        var menu = document.getElementById('menuItems');
+        menu.classList.toggle('open');
+    }
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    window.onload = function() {
+      let activeBreakdown = null; // To track the currently open breakdown chart
+  
+      // Function to create a new pie chart
+      function createChart(ctx, data) {
+          return new Chart(ctx, {
+              type: 'pie',
+              data: data,
+              options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+              }
+          });
+      }
+  
+      // Function to display the breakdown pie chart based on the clicked sector
+      function displayBreakdown(chartId, breakdownData) {
+          // Hide the currently active breakdown, if any
+          if (activeBreakdown) {
+              activeBreakdown.style.display = 'none';
+              activeBreakdown.getContext('2d').clearRect(0, 0, activeBreakdown.width, activeBreakdown.height); // Clear the previous chart
+          }
+  
+          // Show the clicked breakdown chart
+          const breakdownElement = document.getElementById(chartId);
+          if (breakdownElement) {
+              breakdownElement.style.display = 'block';
+              const ctx = breakdownElement.getContext('2d');
+              createChart(ctx, breakdownData);
+              activeBreakdown = breakdownElement; // Set this as the currently active chart
+          }
+      }
+  
+      // Parts chart with clickable sections
+      const partsData = {
+          labels: ['Motion Components (46.48%)', 'Structure (31.69%)', 'Hardware (4.22%)', '3D Printing Materials (4.93%)'],
+          datasets: [{
+              data: [660, 450, 60, 70],
+              backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+              hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+          }]
+      };
+      const partsCtx = document.getElementById('partsChart').getContext('2d');
+      const partsChart = createChart(partsCtx, partsData);
+  
+      // Event listener for Parts chart clicks
+      document.getElementById('partsChart').onclick = function(evt) {
+          const activePoints = partsChart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, false);
+          if (activePoints.length) {
+              const clickedIndex = activePoints[0].index;
+              let breakdownData;
+  
+              switch (clickedIndex) {
+                  case 0: // Motion Components
+                      breakdownData = {
+                          labels: ['Stringing (4.54%)', 'Bearings (4.54%)', 'Servos (30.30%)', 'Motors (30.30%)', 'Mecanum Wheels (30.30%)'],
+                          datasets: [{
+                              data: [30, 30, 200, 200, 200],
+                              backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+                              hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF']
+                          }]
+                      };
+                      displayBreakdown('motionBreakdown', breakdownData);
+                      break;
+                  case 1: // Structure
+                      breakdownData = {
+                          labels: ['Aluminum Sheeting (44.44%)', 'Misc Beams (22.22%)', 'Linear Slides (33.33%)'],
+                          datasets: [{
+                              data: [200, 100, 150],
+                              backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                              hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                          }]
+                      };
+                      displayBreakdown('structureBreakdown', breakdownData);
+                      break;
+                  case 2: // Hardware
+                      breakdownData = {
+                          labels: ['Screws (50.00%)', 'Axels (50.00%)'],
+                          datasets: [{
+                              data: [30, 30],
+                              backgroundColor: ['#FF6384', '#36A2EB'],
+                              hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                          }]
+                      };
+                      displayBreakdown('hardwareBreakdown', breakdownData);
+                      break;
+                  case 3: // 3D Printing Materials
+                      breakdownData = {
+                          labels: ['PLA (57.14%)', 'TPU (42.86%)'],
+                          datasets: [{
+                              data: [40, 30],
+                              backgroundColor: ['#FF6384', '#36A2EB'],
+                              hoverBackgroundColor: ['#FF6384', '#36A2EB']
+                          }]
+                      };
+                      displayBreakdown('printingBreakdown', breakdownData);
+                      break;
+              }
+          }
+      };
+
+      
+
+
+  
+      // Registration chart
+      const registrationData = {
+          labels: ['FTC Team Registration', 'NorCal Qualifying Tournament', 'NorCal Regional Championship', 'World Championship (NF)'],
+          datasets: [{
+              data: [295, 175, 300, 1000],
+              backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+              hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+          }]
+      };
+      const registrationCtx = document.getElementById('registrationChart').getContext('2d');
+      new Chart(registrationCtx, {
+          type: 'pie',
+          data: registrationData,
+          options: {
+              responsive: true,
+              maintainAspectRatio: false
+          }
+      });
+  
+      // Uniforms chart
+      const uniformsData = {
+          labels: ['Shirts (50%)', 'Sweatshirts (50%)'],
+          datasets: [{
+              data: [500, 500],
+              backgroundColor: ['#FF6384', '#36A2EB'],
+              hoverBackgroundColor: ['#FF6384', '#36A2EB']
+          }]
+      };
+      const uniformsCtx = document.getElementById('uniformsChart').getContext('2d');
+      new Chart(uniformsCtx, {
+          type: 'pie',
+          data: uniformsData,
+          options: {
+              responsive: true,
+              maintainAspectRatio: false
+          }
+      });
+  
+      // Travel chart
+      const travelData = {
+          labels: ['Gas (100%)'],
+          datasets: [{
+              data: [200],
+              backgroundColor: ['#FF6384'],
+              hoverBackgroundColor: ['#FF6384']
+          }]
+      };
+      const travelCtx = document.getElementById('travelChart').getContext('2d');
+      new Chart(travelCtx, {
+          type: 'pie',
+          data: travelData,
+          options: {
+              responsive: true,
+              maintainAspectRatio: false
+          }
+      });
+  };
+  
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
