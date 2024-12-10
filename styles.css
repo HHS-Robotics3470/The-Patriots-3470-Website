@@ -19,6 +19,28 @@ body {
 
 
 
+.logo {
+   position: absolute;
+    width: 400px; /* Adjust logo size for smaller screens */
+    top: 5px; /* Adjust top spacing */
+    left: 00px; /* Adjust left spacing */
+    height: 1100px; /* Ensure the logo maintains its aspect ratio */
+    z-index: 10; /* Make sure the logo is above other elements */
+}
+
+
+
+
+
+.header-logo {
+  position: absolute;
+  width: 100px; /* Adjust logo size for smaller screens */
+  top: 5px; /* Adjust top spacing */
+  left: 5px; /* Adjust left spacing */
+  height: auto; /* Ensure the logo maintains its aspect ratio */
+  z-index: 10; /* Make sure the logo is above other elements */
+}
+
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
@@ -49,6 +71,10 @@ body {
     object-fit: cover; /* Ensure the image covers the entire area without distortion */
 }
 }
+
+
+
+
 
 @media only screen and (orientation: portrait) {
   .header-logo {
@@ -218,6 +244,7 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
+  
 }
 
 
@@ -225,6 +252,58 @@ body, html {
 
 
 
+/* Container to center the button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text in container */
+}
+
+/* Button Design */
+.custom-button {
+  display: inline-block;
+  padding: 20px 40px; /* Adjust padding for size */
+  font-size: 20px; /* Larger text */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+  text-transform: uppercase; /* Make text uppercase */
+  color: #fff; /* White text */
+  background: linear-gradient(90deg, #6a11cb, #2575fc); /* Vibrant gradient */
+  background-size: 300% 300%; /* Animated gradient effect */
+  border: none; /* No border */
+  border-radius: 50px; /* Fully rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  text-align: center;
+  animation: gradient-flow 4s infinite; /* Gradient animation */
+}
+
+/* Hover Effect */
+.custom-button:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* Click Effect */
+.custom-button:active {
+  transform: scale(0.95); /* Slight shrink on click */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Gradient Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
 
@@ -559,7 +638,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(90deg, #003366, #0055cc, #0099ff, #ffcc00, #ffdd33); /* Initial gradient */
     background-size: 400% 100%; /* Larger size for smoother animation */
-    animation: gradientShift 30s ease infinite; /* Smooth transition with longer duration */
+    animation: gradientShift 170s ease infinite; /* Smooth transition with longer duration */
     min-height: 100vh; /* Ensures the body takes up the full viewport height */
 }
 
@@ -679,6 +758,17 @@ p {
   display: flex;
   justify-content: space-between;
 }
+.MissionMain {
+  flex-basis: 31%;
+  background: #fff; /* White background for the boxes */
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.3s ease-in-out; /* Smoother transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+
+}
 
 .Mission-col {
   flex-basis: 31%;
@@ -776,112 +866,6 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
- /*----Members----*/
-
-.Members{
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  padding-top: 100;
-}
-
-.Members-col{
-  flex-basis: 31%;
-  border-radius: 10px;
-  margin-bottom: 5%;
-  text-align: left;
-}
-
-/* Remove default link styles */
-.Members-col a {
-  text-decoration: none; /* Removes underline */
-  color: inherit; /* Inherits color from parent, you can specify a color if needed */
-}
-
-/* Optional: Add hover effects for better user experience */
-.Members-col a:hover {
-  color: #333; /* Adjust color on hover if desired */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-
-.Members-col img{
-  width: 100%;
-  border-radius: 10px;
-  transition: box-shadow 0.8s ease, filter 0.8s ease, transform 0.8s ease;
-}
-
-.Members-col img:hover {
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.9), 0 0 40px rgba(255, 0, 255, 0.8);
-  transform: scale(1.05) rotate(-1deg) translateY(-2px) skew(1deg);
-  filter: brightness(100%) saturate(150%) contrast(120%) drop-shadow(0 0 20px rgba(255, 0, 255, 0.8));
-  border: 5px solid rgba(0, 255, 255, 0.8);
-  border-image: linear-gradient(45deg, rgba(0, 255, 255, 1), rgba(255, 0, 255, 1)) 1;
-  animation: neonBorder 4s infinite alternate, glowingImage 3s infinite alternate, pulseGlow 3s infinite alternate;
-  background: linear-gradient(to bottom right, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
-  mix-blend-mode: multiply;
-  z-index: 1; /* Ensure the image appears above other elements */
-}
-
-@keyframes neonBorder {
-  0% {
-      border-color: rgba(0, 255, 255, 0.8);
-  }
-  50% {
-      border-color: rgba(255, 0, 255, 0.8);
-  }
-  100% {
-      border-color: rgba(0, 255, 255, 0.8);
-  }
-}
-
-@keyframes glowingImage {
-  0% {
-      filter: brightness(100%) drop-shadow(0 0 20px rgba(255, 0, 255, 0.8));
-  }
-  50% {
-      filter: brightness(95%) drop-shadow(0 0 30px rgba(0, 255, 255, 0.8));
-  }
-  100% {
-      filter: brightness(100%) drop-shadow(0 0 20px rgba(255, 0, 255, 0.8));
-  }
-}
-
-@keyframes pulseGlow {
-  0% {
-      transform: scale(1.05) rotate(-1deg) translateY(-2px) skew(1deg);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 35px rgba(255, 0, 255, 0.7);
-  }
-  50% {
-      transform: scale(1.07) rotate(-1deg) translateY(-2px) skew(1deg);
-      box-shadow: 0 0 35px rgba(0, 255, 255, 1), 0 0 45px rgba(255, 0, 255, 0.9);
-  }
-  100% {
-      transform: scale(1.05) rotate(-1deg) translateY(-2px) skew(1deg);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 35px rgba(255, 0, 255, 0.7);
-  }
-}
-
-.Members-col p{
-  padding: 0;
-  text-align: center;
-
-}
-
-.Members-col h3{
-  margin-top: 16px;
-  margin-bottom: 15px;
-  text-align: center;
-}
 
 
 
@@ -1406,144 +1390,5 @@ body {
 
 
 
-
-
-
-/* Heading 2 */
-h2 {
-  font-size: 3rem; /* Adjust as needed */
-  color: #ff0; /* Bright color for emphasis */
-  margin-bottom: 20px; /* Spacing below the heading */
-  text-shadow: 
-    1px 1px 0 #000, 
-    -1px -1px 0 #000, 
-    1px -1px 0 #000, 
-    -1px 1px 0 #000, 
-    0 1px 0 #000, 
-    0 -1px 0 #000, 
-    1px 0 0 #000, 
-    -1px 0 0 #000, 
-    0 2px 6px rgba(255, 255, 0, 0.8); /* Neon glow effect */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-h2:hover {
-  color: #fff; /* Change color on hover */
-  text-shadow: 
-    1px 1px 0 #000, 
-    -1px -1px 0 #000, 
-    1px -1px 0 #000, 
-    -1px 1px 0 #000, 
-    0 1px 0 #000, 
-    0 -1px 0 #000, 
-    1px 0 0 #000, 
-    -1px 0 0 #000, 
-    0 4px 12px rgba(255, 255, 255, 1); /* Enhanced glow on hover */
-}
-
-/* Heading 3 */
-h3 {
-  font-size: 2rem; /* Adjust as needed */
-  color: #ff0; /* Bright color for emphasis */
-  margin-bottom: 15px; /* Spacing below the heading */
-  text-shadow: 
-    1px 1px 0 #000, 
-    -1px -1px 0 #000, 
-    1px -1px 0 #000, 
-    -1px 1px 0 #000, 
-    0 1px 0 #000, 
-    0 -1px 0 #000, 
-    1px 0 0 #000, 
-    -1px 0 0 #000, 
-    0 1px 4px rgba(255, 255, 0, 0.8); /* Neon glow effect */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-h3:hover {
-  color: #fff; /* Change color on hover */
-  text-shadow: 
-    1px 1px 0 #000, 
-    -1px -1px 0 #000, 
-    1px -1px 0 #000, 
-    -1px 1px 0 #000, 
-    0 1px 0 #000, 
-    0 -1px 0 #000, 
-    1px 0 0 #000, 
-    -1px 0 0 #000, 
-    0 3px 8px rgba(255, 255, 255, 1); /* Enhanced glow on hover */
-}
-
-
-
-
-
-
-
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Increased shadow for a nicer effect */
-  border-radius: 15px; /* Rounded edges */
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-.budget-category {
-  margin: 30px 0;
-  background-color: #f9f9f9; /* Light background for each budget section */
-  padding: 15px;
-  border-radius: 15px; /* Rounded edges for categories */
-  transition: transform 0.3s ease; /* Hover effect transition */
-}
-
-.budget-category:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-
-
-button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.chart {
-  display: none;
-  margin: 20px auto;
-  max-width: 500px;
-  max-height: 400px;
-}
-
-canvas {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px; /* Rounded edges for the canvas (pie charts) */
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the pie chart */
-}
-
-.breakdown-chart {
-  background-color: #f0f0f0; /* Slightly darker background for breakdown charts */
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for breakdowns */
-}
 
 
