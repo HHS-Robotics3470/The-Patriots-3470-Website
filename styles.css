@@ -75,7 +75,6 @@ body {
 
 
 
-
 @media only screen and (orientation: portrait) {
   .header-logo {
     width: 90px; /* Adjust logo size for smaller screens */
@@ -130,7 +129,8 @@ p {
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/Robot.jpg);
+    background-image: linear-gradient(rgba(234, 236, 141, 0.3), rgba(87, 90, 216, 0.35)), url(images/Sunset_Robot.jpg);
+    /* background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/Sunset_Robot.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -199,7 +199,7 @@ nav .fa-bars, nav .fa-xmark {
 /* Text Box */
 .text-box {
     width: 90%;
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -227,13 +227,21 @@ nav .fa-bars, nav .fa-xmark {
     cursor: pointer;
     text-decoration: none;
     animation: flameEffect 4.5s ease-in-out infinite;
+    text-shadow: 0 1px 3px rgba(117, 117, 117, 0), 0 1px 5px rgba(111, 109, 109, 0.2); /* Light contrast shadow */
 }
 
+
 .text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
+  margin: 10px 0 40px;
+  font-size: 16px; /* Slightly larger for better visibility */
+  color: #fff; /* White text for contrast on a lighter background */
+  font-family: 'Roboto', sans-serif; /* Modern, clean font */
+  line-height: 1.5; /* Improved line spacing for readability */
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.9), 0 1px 5px rgba(0, 0, 0, 0.6); /* Stronger shadow for better contrast */
+  font-weight: 400; /* Regular weight for a sleek, professional look */
 }
+
+
 
 
 
@@ -677,25 +685,28 @@ body {
 
 
 
-
 /* Hero Button */
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+.hero-btn { 
+  display: inline-block; 
+  text-decoration: none; 
+  color: #fff; 
+  border: 1px solid #fff; 
+  padding: 12px 34px; 
+  font-size: 13px; 
+  background-image: linear-gradient(to right, rgba(234, 236, 141, 0.6), rgba(87, 90, 216, 0.6)); 
+  cursor: pointer; 
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  transition: background 0.5s, border 0.5s;
+
 }
 
-.hero-btn:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    transition: 1s;
+.hero-btn:hover { 
+  border: 1px solid #f44336; 
+  background-color: #f44336; 
+  transition: 1s; 
+
 }
+
 
   
 
@@ -1050,94 +1061,91 @@ body.scrolled {
 }
 
 
-
-
 /* Sponsors Section */
 .sponsors-section {
   padding: 60px;
-  background: transparent;
-  color: #333;
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
   text-align: center;
   position: relative;
 }
 
 /* Sponsors Heading */
 .sponsors-section h2 {
-  font-size: 3rem; /* Larger font size */
-  color: #ff0; /* Bright color for emphasis */
-  margin-bottom: 20px; /* Spacing below the heading */
-  text-shadow:
-    1px 1px 0 #000,  /* Black shadow for left and down */
-    -1px -1px 0 #000, /* Black shadow for right and up */
-    1px -1px 0 #000,  /* Black shadow for top right diagonal */
-    -1px 1px 0 #000,  /* Black shadow for bottom left diagonal */
-    0 1px 0 #000,    /* Black shadow for vertical outline */
-    0 -1px 0 #000,   /* Black shadow for vertical outline */
-    1px 0 0 #000,    /* Black shadow for horizontal outline */
-    -1px 0 0 #000,   /* Black shadow for horizontal outline */
-    0 2px 6px rgba(255, 255, 0, 0.8); /* Neon glow effect */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+  font-size: 3rem;
+  color: #ff0;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .sponsors-section h2:hover {
-  color: #fff; /* Change color on hover */
-  text-shadow:
-    1px 1px 0 #000,  /* Black shadow for left and down */
-    -1px -1px 0 #000, /* Black shadow for right and up */
-    1px -1px 0 #000,  /* Black shadow for top right diagonal */
-    -1px 1px 0 #000,  /* Black shadow for bottom left diagonal */
-    0 1px 0 #000,    /* Black shadow for vertical outline */
-    0 -1px 0 #000,   /* Black shadow for vertical outline */
-    1px 0 0 #000,    /* Black shadow for horizontal outline */
-    -1px 0 0 #000,   /* Black shadow for horizontal outline */
-    0 4px 12px rgba(255, 255, 255, 1); /* Enhanced glow on hover */
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
 }
 
 /* Sponsors Gallery */
 .sponsors-gallery {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  gap: 20px; /* Spacing between items */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-top: 20px;
 }
 
 .sponsor-item {
-  flex: 1 1 calc(33.333% - 20px); /* Three items per row with spacing */
-  max-width: 300px; /* Maximum width of each item */
+  flex: 1 1 calc(30% - 20px);
+  max-width: 280px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .sponsor-item img {
-  width: 100%; /* Full width of the container */
+  width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners for images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Base shadow */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.sponsor-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(255, 255, 0, 0.5);
+}
+
 .sponsor-item img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.6);
 }
 
 .sponsor-item p {
-  margin-top: 10px;
-  font-size: 1rem; /* Font size for caption */
-  color: #fff;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff0;
+  text-shadow: 0 0 5px rgba(255, 255, 0, 0.8);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Responsive Design for Smaller Screens */
+.sponsor-item:hover p {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .sponsor-item {
-    flex: 1 1 100%; /* Full width on smaller screens */
+    flex: 1 1 100%;
   }
-
   .sponsors-gallery {
-    gap: 10px; /* Reduced gap on smaller screens */
+    gap: 15px;
   }
 }
+
 
 
 
