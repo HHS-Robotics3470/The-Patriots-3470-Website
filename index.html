@@ -50,7 +50,11 @@
             <li><a href="robo.html" class="nav-link">ROBOTS & COMPETITIONS</a></li>
             <li><a href="https://www.successfund.com/HHS_Robotics" class="nav-link">DONATIONS
               <li><a href="tech.html" class="nav-link">BUDGET
-            <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+<!-- Link to scroll to bottom of the page -->
+<li><a href="#bottom" class="nav-link" onclick="closeMenu()">CONTACT</a></li>
+
+<!-- Bottom section of your page -->
+<div id="bottom"></div>
         </ul>
       </div>
     </nav>
@@ -58,9 +62,11 @@
     <!-- Hero Section -->
     <div class="text-box">
       <h1>THE PATRIOTS 3470</h1>
-      <p>“When there’s a will, there’s a way.” </p>
+      <div class="heading-color">
+      <p>“When there’s a will, there’s a way.” </p></div>
       <br>
-      <a href="about.html" class="hero-btn">See Our Team!</a>
+      <a href="members.html" class="hero-btn">See Our Team!</a>
+    
     </div>
   </section>
 
@@ -74,14 +80,19 @@
       With the help of our community and our homeschool, The Patriots have become a formidable team in our league.</p>
     </div>
     <div class="row">
-      <div class="Mission-col">
-        <h3>What We Do</h3>
-        <p>We do this, this and this. Fill this section and add more if needed.</p>
-      </div>
+      
       <div class="Mission-col">
         <h3>Achievement</h3>
         <p>#1 ALLIANCE CAPTAIN 2023 SEASON.</p>
       </div>
+
+
+      <div class="Mission-col">
+        <h3>Outreach</h3>
+        <p>Reached Out to 70+ Businesses & Successfully Attained 20+ Sponsorships</p>
+      </div>
+
+
       <div class="Mission-col">
         <h3>Achievement</h3>
         <p>#9 IN FIRST-TIME NORCAL STATE COMPETITION</p>
@@ -105,94 +116,221 @@
   
 
 
+  <section class="sponsors-section">
+    <div class="sponsors-container">
+      <h2>Our Generous Sponsors</h2>
 
-<section class="sponsors-section">
-  <div class="sponsors-container">
-    <h2>Our Generous Sponsors</h2>
-    <div class="sponsors-carousel">
-      <div class="sponsor-slide">
-        <img src="images/Together.jpg" alt="Sponsor 1">
-        <p>Sponsor 1</p>
-      </div>
-      <div class="sponsor-slide">
-        <img src="images/Together.jpg" alt="Sponsor 2">
-        <p>Sponsor 2</p>
-      </div>
-      <div class="sponsor-slide">
-        <img src="images/Together.jpg" alt="Sponsor 3">
-        <p>Sponsor 3</p>
-      </div>
-      <div class="sponsor-slide">
-        <img src="images/Together.jpg" alt="Sponsor 4">
-        <p>Sponsor 4</p>
+      <br>
+      <br>
+      <br>
+      <div class="sponsors-wrapper">
+        <div class="sponsors-carousel">
+          
+          <!-- Original sponsor slides -->
+          <div class="sponsor-slide">
+            <img src="images/Patriots_Jet_Team_Logo.jpg" alt="Sponsor 1">
+            <p>The Patriots Jet Team</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/PGE.jpg" alt="Sponsor 2">
+            <p>PG&E</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Polymaker_Logo.jpg" alt="Sponsor 3">
+            <p>Polymaker</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Kumon_2nd.jpg" alt="Sponsor 4">
+            <p>Kumon</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Brentwood_boba_2nd.jpg" alt="Sponsor 5">
+            <p>Brentwood Boba Corner</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Cal_Pay_Logo.jpg" alt="Sponsor 6">
+            <p>California Payroll</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Merrill_Gardens_2nd.jpg" alt="Sponsor 7">
+            <p>Merrill Gardens</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Starrynite_Studios_Logo.jpg" alt="Sponsor 8">
+            <p>Starrynite Studios</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Straw_Hat_Pizza_Logo.jpg" alt="Sponsor 9">
+            <p>Straw Hat Pizza</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/TeaZenTea_Logo.jpg" alt="Sponsor 10">
+            <p>TeaZenTea Boba Place</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/The_Bike_Shop_Logo.jpg" alt="Sponsor 11">
+            <p>The Bike Shop</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/UC_Davis_Astro_Logo.jpg" alt="Sponsor 12">
+            <p>UC Davis Astro Space Club</p>
+          </div>
+  
+          <!-- Duplicate sponsor slides for smooth transition -->
+          <div class="sponsor-slide">
+            <img src="images/Patriots_Jet_Team_Logo.jpg" alt="Sponsor 1">
+            <p>The Patriots Jet Team</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/PGE.jpg" alt="Sponsor 2">
+            <p>PG&E</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Polymaker_Logo.jpg" alt="Sponsor 3">
+            <p>Polymaker</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Kumon_2nd.jpg" alt="Sponsor 4">
+            <p>Kumon</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Brentwood_boba_2nd.jpg" alt="Sponsor 5">
+            <p>Brentwood Boba Corner</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Cal_Pay_Logo.jpg" alt="Sponsor 6">
+            <p>California Payroll</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Merrill_Gardens_2nd.jpg" alt="Sponsor 7">
+            <p>Merrill Gardens</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Starrynite_Studios_Logo.jpg" alt="Sponsor 8">
+            <p>Starrynite Studios</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/Straw_Hat_Pizza_Logo.jpg" alt="Sponsor 9">
+            <p>Straw Hat Pizza</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/TeaZenTea_Logo.jpg" alt="Sponsor 10">
+            <p>TeaZenTea Boba Place</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/The_Bike_Shop_Logo.jpg" alt="Sponsor 11">
+            <p>The Bike Shop</p>
+          </div>
+          <div class="sponsor-slide">
+            <img src="images/UC_Davis_Astro_Logo.jpg" alt="Sponsor 12">
+            <p>UC Davis Astro Space Club</p>
+          </div>
+  
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
-<!-- CSS for Continuous Scrolling Carousel -->
-<style>
-  .sponsors-section {
-    text-align: center;
-    margin: 50px 0;
-  }
-
-  .sponsors-carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    gap: 20px;
-    animation: scrollCarousel 50s linear infinite;
-  }
-
-  .sponsor-slide {
-    flex: 0 0 auto;
-    text-align: center;
-    width: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .sponsor-slide img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .sponsor-slide p {
-    margin-top: 10px;
-    font-size: 14px;
-  }
-
-  /* Animation for smooth scrolling with reset */
-  @keyframes scrollCarousel {
-    0% {
-      transform: translateX(100%);
+  <style>
+    .sponsors-section {
+      text-align: center;
+      margin: 60px 0;
+      font-family: 'Poppins', sans-serif;
+      padding: 40px 0;
+      color: white;
     }
-    100% {
-      transform: translateX(-100%);
+  
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
     }
-  }
+  
+    .sponsors-wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+    }
+  
+    .sponsors-carousel {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: scrollCarousel 45s linear infinite;
+      padding: 10px 0;
+    }
+  
+    .sponsors-carousel:hover {
+      animation-play-state: paused;
+    }
+  
+    .sponsor-slide {
+      flex: 0 0 auto;
+      text-align: center;
+      width: 180px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .sponsor-slide img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .sponsor-slide p {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .sponsor-slide:hover {
+      transform: scale(1.15) rotate(-3deg);
+    }
+  
+    .sponsor-slide img:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+    }
+  
+    .sponsor-slide:hover p {
+      color: #ffeb3b;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+  
+    @keyframes scrollCarousel {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  
+  
 
-  /* Hover Effect */
-  .sponsor-slide:hover {
-    color: #fff; /* Change color on hover */
-  text-shadow:
-    1px 1px 0 #000,  /* Black shadow for left and down */
-    -1px -1px 0 #000, /* Black shadow for right and up */
-    1px -1px 0 #000,  /* Black shadow for top right diagonal */
-    -1px 1px 0 #000,  /* Black shadow for bottom left diagonal */
-    0 1px 0 #000,    /* Black shadow for vertical outline */
-    0 -1px 0 #000,   /* Black shadow for vertical outline */
-    1px 0 0 #000,    /* Black shadow for horizontal outline */
-    -1px 0 0 #000,   /* Black shadow for horizontal outline */
-    0 4px 12px rgba(255, 255, 255, 1); /* Enhanced glow on hover */
-
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
-  }
-</style>
 
 
 
@@ -215,8 +353,8 @@
 
  <!-- Outreach Section -->
 <section class="outreach">
+
   <div class="text-white"> <h1>Our Outreach</h1></div>
-  <p>Explain Our Outreach Here!</p>
   <div class="row">
       <div class="outreach-col">
           <a href="community.html">
